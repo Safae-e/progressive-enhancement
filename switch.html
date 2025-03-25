@@ -9,6 +9,53 @@
 		<style>
 			/* Schrijf hier gewoon je CSS voor dit component */
 
+			/* De box voor de switch */
+		    .switch {
+		      position: relative;
+		      display: inline-block;
+		      width: 60px;
+		      height: 34px;
+		    }
+		
+		/* De checkbox */
+		    .switch input {
+		      display: none
+		    }
+		
+		 /* De balk van de switch */
+		    .slider {
+		      position: absolute;
+		      top: 0;
+		      left: 0;
+		      right: 0;
+		      bottom: 0;
+		      background-color: #737272;
+		      border-radius: 34px;
+		    }
+		
+		.slider:before {
+		      position: absolute;
+		      content: "";
+		      height: 26px;
+		      width: 26px;
+		      border-radius: 50%;
+		      left: 4px;
+		      bottom: 4px;
+		      background-color: white;
+		      transition: 0.2s;
+		    }
+
+					
+			input:checked + .slider {
+              background-color: #5ee4b1;
+            }
+		
+		 /* Wanneer de knop naar rechts gaat */
+		    input:checked + .slider:before {
+		      transform: translateX(26px);
+		    }
+		
+
 					/* Hint: Dit component kun je volledig met HTML en CSS bouwen */
 		
 					/* Hint: Hoe ver ga je qua styling? Vraag jezelf dit altijd af */
@@ -17,8 +64,10 @@
 	<body>
 		<h1>Switch control</h1>
 
-		<input type="checkbox" switch>
-
+		<label class="switch">
+			<input type="checkbox">
+			<span class="slider"></span>
+		  </label>
 		
 		<!-- Hint: Safari heeft hiervoor iets bedacht, maar is dat al een standaard?
 		     Wat gebeurt er in browsers die dat nog niet ondersteunen? -->
