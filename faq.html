@@ -8,7 +8,25 @@
 		<link href="assets/styles.css" rel="stylesheet">
 		<style>
 			/* Schrijf hier gewoon je CSS voor dit component */
+			
+			details > p {
+				margin: 0%;
+				border-radius: 0 8px 8px 8px;
+				padding: 5px;
+			}
 
+			details > summary {
+				width: 270px;
+				border-radius: 8px 8px 0 0;
+				padding: 5px;
+
+			}
+  			
+			details:open > summary,p {
+				background-color:rgb(122, 13, 210) ;
+				margin-top: 15px;
+			}
+		
 			/* Hint: Dit component kun je volledig met HTML en CSS bouwen */
 
 			/* Hint: Denk aan de states van het component; deze kan open en dicht zijn */
@@ -45,11 +63,11 @@
 
 	
 		<!-- Hint: Dit stukje HTML geeft het misschien al weg :) -->
-		<!-- <details open>
+		<details open>
 			<summary>Demo video</summary>
 			<video src="assets/faq.mp4" width="765" height="769" controls muted autoplay loop>
 				<a href="assets/faq.mp4">assets/faq.mp4</a>
 			</video>
-		</details> -->
+		</details>
 	</body>
 </html>
