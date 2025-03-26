@@ -17,44 +17,45 @@
 		      height: 34px;
 		    }
 		
-		/* De checkbox */
-		    .switch input {
-		      display: none
-		    }
-		
-		 /* De balk van de switch */
-		    .slider {
-		      position: absolute;
-		      top: 0;
-		      left: 0;
-		      right: 0;
-		      bottom: 0;
-		      background-color: #737272;
-		      border-radius: 34px;
-		    }
-		
-		.slider:before {
-		      position: absolute;
-		      content: "";
-		      height: 26px;
-		      width: 26px;
-		      border-radius: 50%;
-		      left: 4px;
-		      bottom: 4px;
-		      background-color: white;
-		      transition: 0.2s;
-		    }
+			/* De checkbox */
+			    .switch input {
+			      display: none
+			    }
+			
+			 /* De balk van de switch */
+			    .slider {
+			      position: absolute;
+			      top: 0;
+			      left: 0;
+			      right: 0;
+			      bottom: 0;
+			      background-color: #737272;
+			      border-radius: 34px;
+			    }
+			
+				/* Slider rondje */
+				.slider:before {
+			      position: absolute;
+			      content: "";
+			      height: 26px;
+			      width: 26px;
+			      border-radius: 50%;
+			      left: 4px;
+			      bottom: 4px;
+			      background-color: white;
+			      transition: 0.2s;
+			    }
 
-					
-			input:checked + .slider {
-              background-color: #5ee4b1;
-            }
-		
-		 /* Wanneer de knop naar rechts gaat */
-		    input:checked + .slider:before {
-		      transform: translateX(26px);
-		    }
-		
+
+				input:checked + .slider {
+        	      background-color: #5ee4b1;
+        	    }
+			
+			    /* rondje gaat naar rechts */
+			    input:checked + .slider:before {
+			      transform: translateX(26px);
+			    }
+			
 
 					/* Hint: Dit component kun je volledig met HTML en CSS bouwen */
 		

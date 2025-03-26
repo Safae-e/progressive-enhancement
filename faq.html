@@ -9,7 +9,55 @@
 		<style>
 			/* Schrijf hier gewoon je CSS voor dit component */
 			
-			details > p {
+			.item:nth-of-type(1)[open] summary {
+				background-color: rgb(128, 0, 255);
+				width: 270px;
+				border-radius: 8px 8px 0 0;
+				padding: 5px;
+			}
+
+			.item:nth-of-type(1)[open] p {
+				background-color: rgb(128, 0, 255);
+				margin: 0%;
+				border-radius: 0 8px 8px 8px;
+				padding: 5px;
+				margin-bottom: 10px;
+
+			}
+
+
+			.item:nth-of-type(2)[open] summary {
+				background-color: rgb(102, 223, 150);
+				width: 270px;
+				border-radius: 8px 8px 0 0;
+				padding: 5px;
+			}
+
+			.item:nth-of-type(2)[open] p {
+				background-color: rgb(102, 223, 150);
+				margin: 0%;
+				border-radius: 0 8px 8px 8px;
+				padding: 5px;
+				margin-bottom: 10px;
+			}
+
+
+			.item:nth-of-type(3)[open] summary {
+				background-color: rgb(239, 235, 105);
+				width: 270px;
+				border-radius: 8px 8px 0 0;
+				padding: 5px;
+			}
+			
+			.item:nth-of-type(3)[open] p {
+				background-color: rgb(239, 235, 105);
+				margin: 0%;
+				border-radius: 0 8px 8px 8px;
+				padding: 5px;
+				margin-bottom: 10px;
+			}
+
+		details > p {
 				margin: 0%;
 				border-radius: 0 8px 8px 8px;
 				padding: 5px;
@@ -21,13 +69,6 @@
 				padding: 5px;
 
 			}
-  			
-			details:open > summary,p {
-				background-color:rgb(122, 13, 210) ;
-				margin-top: 15px;
-			}
-		
-		
 			/* Hint: Dit component kun je volledig met HTML en CSS bouwen */
 
 			/* Hint: Denk aan de states van het component; deze kan open en dicht zijn */
@@ -37,7 +78,7 @@
 		<h1>Veelgestelde vragen</h1>
 
 
-		<details>
+		<details class="item">
 			<summary>Wat is frontend development?</summary>
 
 			<p>
@@ -45,7 +86,7 @@
 			</p>
 		</details>
 
-		<details>
+		<details class="item">
 			<summary>Moet ik al kunnen coderen?</summary>
 
 			<p>
@@ -53,7 +94,7 @@
 			</p>
 		</details>
 
-		<details>
+		<details class="item">
 			<summary>Wat is een Associate Degree?</summary>
 
 			<p>
