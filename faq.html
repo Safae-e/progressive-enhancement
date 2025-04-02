@@ -49,7 +49,7 @@
 				padding: 5px;
 			}
 			
-			.item:nth-of-type(3)[open] p {
+			.item:nth-of-type(3)[open] .item__content {
 				background-color: rgb(239, 235, 105);
 				margin: 0%;
 				border-radius: 0 8px 8px 8px;
@@ -57,18 +57,24 @@
 				margin-bottom: 10px;
 			}
 
-		details > p {
-				margin: 0%;
-				border-radius: 0 8px 8px 8px;
-				padding: 5px;
-			}
-
 			details > summary {
 				width: 270px;
-				border-radius: 8px 8px 0 0;
+				border-radius: 8px;
+				border: 2px solid currentColor;
 				padding: 5px;
 
 			}
+
+			.item__content {
+				max-width: 70ch ;
+
+			}
+
+
+			/* details:open {
+				background-color: rgb(128, 0, 255);
+			} */
+			 
 			/* Hint: Dit component kun je volledig met HTML en CSS bouwen */
 
 			/* Hint: Denk aan de states van het component; deze kan open en dicht zijn */
@@ -80,32 +86,38 @@
 
 		<details class="item">
 			<summary>Wat is frontend development?</summary>
-
+			
+			<div class="item__content">
 			<p>
 				Een frontend developer ontwerpt en bouwt websites in HTML, CSS en JavaScript. Deze frontend talen leer je bij ons, je hebt dus geen voorkennis nodig.
 			</p>
+			</div>
 		</details>
 
 		<details class="item">
 			<summary>Moet ik al kunnen coderen?</summary>
-
-			<p>
-				Nee, je hebt helemaal geen voorkennis nodig om te beginnen aan deze opleiding, we kunnen je alles leren! Als je wel al voorkennis hebt, is dat alleen maar goed, dan kunnen we je helpen je skills te verbeteren en te verdiepen in de stof.
-			</p>
+			
+			<div class="item__content">
+				<p>
+					Nee, je hebt helemaal geen voorkennis nodig om te beginnen aan deze opleiding, we kunnen je alles leren! Als je wel al voorkennis hebt, is dat alleen maar goed, dan kunnen we je helpen je skills te verbeteren en te verdiepen in de stof.
+				</p>
+		    </div>
 		</details>
 
 		<details class="item">
 			<summary>Wat is een Associate Degree?</summary>
 
-			<p>
-				Een Associate degree-opleiding is een tweejarige hbo-opleiding op niveau 5. Een Ad slaat een brug tussen het mbo-4 (niveau 4) en een hbo-bachelor (niveau 6). Met een Associate degree kies je voor een praktijkgerichte hbo-opleiding; je wordt opgeleid voor een beroep dat aansluit bij de praktijk. In dit geval word je opgeleid tot ‘frontend designer/developer' of kortweg ‘frontender’. Frontenders ontwerpen en maken interactieve, toegankelijke toepassingen voor het web. Frontenders werken binnen het gebied van software development, interactieontwerp en digitaal visueel ontwerp.
-				Na afronding van deze tweejarige hbo-opleiding, krijg je een wettelijk erkend hbo-diploma met de graad Associate degree. Met dit Ad-diploma kun je direct aan de slag in het werkveld of doorstromen naar de bacheloropleiding Communication and Multimedia Design (CMD).
-			</p>
+			<div class="item__content">
+				<p>
+					Een Associate degree-opleiding is een tweejarige hbo-opleiding op niveau 5. Een Ad slaat een brug tussen het mbo-4 (niveau 4) en een hbo-bachelor (niveau 6). Met een Associate degree kies je voor een praktijkgerichte hbo-opleiding; je wordt opgeleid voor een beroep dat aansluit bij de praktijk. In dit geval word je opgeleid tot ‘frontend designer/developer' of kortweg ‘frontender’. Frontenders ontwerpen en maken interactieve, toegankelijke toepassingen voor het web. Frontenders werken binnen het gebied van software development, interactieontwerp en digitaal visueel ontwerp.
+					Na afronding van deze tweejarige hbo-opleiding, krijg je een wettelijk erkend hbo-diploma met de graad Associate degree. Met dit Ad-diploma kun je direct aan de slag in het werkveld of doorstromen naar de bacheloropleiding Communication and Multimedia Design (CMD).
+				</p>
+			</div>
 		</details>
 
 	
 		<!-- Hint: Dit stukje HTML geeft het misschien al weg :) -->
-		<details open>
+		<details >
 			<summary>Demo video</summary>
 			<video src="assets/faq.mp4" width="765" height="769" controls muted autoplay loop>
 				<a href="assets/faq.mp4">assets/faq.mp4</a>
